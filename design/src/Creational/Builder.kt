@@ -40,6 +40,9 @@ class Person{
         this.dob = dob
     }
 
+
+    fun getName() = name
+
     data class PersonBuilder(private val name:String,private val age:Float){
 
         private lateinit var lastName:String
