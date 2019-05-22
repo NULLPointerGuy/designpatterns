@@ -52,12 +52,20 @@ interface PersonData{
  * This data could be coming from an persistance storage.
  */
 class dbData:PersonData{
-    override fun getPersonalData(): Person {
-        return Person.PersonBuilder("karthik Network",28.0f)
+
+    private val person:Person
+
+    constructor(){
+        person = Person.PersonBuilder("karthik Network",28.0f)
                 .setDob("12-04-1970")
                 .setLastName("Rk")
                 .setHomeAddress("#1234 2nd stage 2nd A main")
                 .build()
+    }
+
+
+    override fun getPersonalData(): Person {
+        return person
     }
 
 }
@@ -66,12 +74,19 @@ class dbData:PersonData{
  * This could be coming over an async network call.
  */
 class networkData:PersonData{
-    override fun getPersonalData(): Person {
-        return Person.PersonBuilder("karthik DB",28.0f)
+
+    private val person:Person
+
+    constructor(){
+        person = Person.PersonBuilder("karthik DB",28.0f)
                 .setDob("12-04-1970")
                 .setLastName("Rk")
                 .setHomeAddress("#1234 2nd stage 2nd A main")
                 .build()
+    }
+
+    override fun getPersonalData(): Person {
+        return person
     }
 
 }
