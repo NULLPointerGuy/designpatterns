@@ -1,13 +1,29 @@
 package Structural
 
 /**
+ *
+ * Use this pattern whenever there is two orthogonal dimensions, as shown below.
+ *
+ *         A
+        /     \
+      Aa      Ab
+     / \     /  \
+    Aa1 Aa2  Ab1 Ab2
+
+        to
+
+        A                N
+      /  \              / \
+     Aa(N)Ab(N)        1   2
+ *
+ *
+ *
+ *
  * Pattern that divides single monolithic class into several class
  * with it's own hierarchy.
  *
  * Eg:Device has a Remote relationship, where remote has its own hierarchy
  * and device has its own.
- *
- * `has a` is a bridge between two class remote and device.
  */
 fun main(){
     val tv = Tv(UniversalRemote())
