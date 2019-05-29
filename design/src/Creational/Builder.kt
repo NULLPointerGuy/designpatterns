@@ -41,7 +41,9 @@ class Person{
     }
 
 
-    fun getName() = name
+    fun getName():String = name
+
+    fun getLastName():String = lastName
 
     data class PersonBuilder(private val name:String,private val age:Float){
 
