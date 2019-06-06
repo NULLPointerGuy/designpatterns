@@ -2,7 +2,12 @@ package Structural
 
 
 /**
+ * "Smart Proxy pattern" in which instead of extending functionality statically
+ *  via inheritance, you opt for has a relationship.
  *
+ *  for eg: in below IceCreamCake is made using black current, you can simply change
+ *  the functionality by passing chocolate tomorrow, as getDescritption() changes
+ *  for each type of flavours.
  */
 fun main(){
     val iceCream = vaniallaIceCream()
