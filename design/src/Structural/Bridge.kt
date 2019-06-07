@@ -2,7 +2,7 @@ package Structural
 
 /**
  *
- * Use this pattern whenever there is two orthogonal dimensions, as shown below.
+ * Use this pattern whenever there is "two orthogonal dimensions", as shown below.
  *
  *         A
         /     \
